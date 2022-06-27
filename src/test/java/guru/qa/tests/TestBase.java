@@ -29,7 +29,7 @@ public class TestBase {
         Configuration.browserSize = browserResolution;
         /**Создаем переменную, которая принимает значения из командной строки при запуске теста*/
         String browserVersion = System.getProperty("version", "100");
-        Configuration.browserSize = browserVersion;
+        Configuration.browserVersion = browserVersion;
 
         /**Подключаемся к удаленному серверу с селеноидом по логину и паролю*/
 //        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
