@@ -3,6 +3,7 @@ package guru.qa.tests;
 import guru.qa.steps.AnnotationQAapfSteps;
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 /**Общие для всех тестов аннотации можно вынести на уровень класса и не повторять их перед каждым тестом.*/
@@ -11,6 +12,7 @@ import org.junit.jupiter.api.Test;
 public class DemoQAapfTestCase extends TestBase {
     /**Allure Selenide listener нам тут подключать не нужно, так как он был подключен в родительском классе TestBase.*/
     @Test
+    @Tag("needed")
     @DisplayName("Проверка работы автотеста на странице проверки формы DemoQA")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Подключение Дженкинса")

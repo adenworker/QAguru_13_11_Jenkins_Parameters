@@ -2,12 +2,16 @@ package guru.qa.steps;
 
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
+import org.junit.jupiter.api.Tag;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.executeJavaScript;
 
+/**Тест может иметь больше 1 тэга. В тасках гредла можно будет настроить этот тест под разные тест-сьюты.*/
+@Tag("needed")
+@Tag("needless")
 public class AnnotationQAapfSteps {
 
     @Step("Открываем страницу automation-practice-form")
