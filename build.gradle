@@ -41,6 +41,7 @@ dependencies {
 }
 
 test {
+    //systemProperties(System.getProperties()) позволяет брать параметры из командной строки при запуске тестов этого сьюта
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
@@ -54,6 +55,7 @@ test {
 //Таска, которую можно передать гредлу при запуске через командную строку
 //Содержит тэги нужных тестов и (опционально) теги ненужных
 task tagGradleJenkins(type: Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform{
         includeTags "needed"
         excludeTags "needless"
